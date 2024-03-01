@@ -1,5 +1,6 @@
 package com.jonfen.ybisserver.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,9 +8,19 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+// @Table(name = "products")
 public class Product {
 
     public Product() {
+
+    }
+
+    public Product(String name, String description, int price, String imageUrl, int stock) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.imageUrl = imageUrl;
+        this.stock = stock;
 
     }
 
@@ -31,4 +42,14 @@ public class Product {
 
     @Column(name="stock")
     private int stock;
+
+//    @ManyToOne
+//    @JoinColumn(name="products")
+//    @JsonIgnore
+//    private Order order;
+
+//    @ManyToOne
+//    @JoinColumn(name = "order_id")
+//    private Order order;
+
 }

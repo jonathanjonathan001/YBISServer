@@ -57,26 +57,6 @@ public class OrderController {
 
         return orderService.createOrder(order);
 
-//        for (OrderLines orderLine : order.getOrderLines()) {
-//
-//            order.getOrderLines().add(new OrderLines(newOrder, orderLine.getProduct()));
-//        }
-
-        // newOrder.getId()
-
-//        for (OrderLines orderLine : newOrder.getOrderLines()) {
-//
-//            orderLine.getOrder().setId(order.getId());
-//        }
-
-//        for (OrderLines orderLine : order.getOrderLines()) {
-//            orderLine.getProduct().setId orderLine.getProduct().getId()
-//        }
-
-
-
-        // service.createOrderLines(order.getOrderLines());
-
 
     }
 

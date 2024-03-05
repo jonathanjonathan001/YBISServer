@@ -29,8 +29,10 @@ public class OrderLine {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonBackReference
     @JoinColumn(name = "order_id")
-
     private Order order;
+
+    @Column(name = "amount")
+    private Integer amount;
 
     // @JsonIncludeProperties(value = {"product_id"})
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

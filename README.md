@@ -3,6 +3,8 @@
 
 go to application properties, uncomment the lines under LOCAL DEV<br>
 and comment out the lines under AWS<p>
+Comment out the lines that have to do with SSL and server.port
+<p>
 Run.. <br>
 
 docker network create my-network<br><br>

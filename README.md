@@ -1,6 +1,10 @@
 
 <h1>YBIF SHOP SERVER</h1>
+
+go to application properties, uncomment the lines under LOCAL DEV<br>
+and comment out the lines under AWS<p>
 Run.. <br>
+
 docker network create my-network<br><br>
 docker run --network my-network --name=mysql-ybis-network -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=ybis -e MYSQL_USER=dev -e MYSQL_PASSWORD=password  mysql:latest<br><br>
 mvn clean package -Dmaven.test.skip<br><br>
